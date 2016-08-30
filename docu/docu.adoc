@@ -1,2 +1,174 @@
 = Documentation
 
+== SocketClient
+
+This piece of code creates the socket connection to the discord server.
+
+=== What we used
+To establish the connection we used the *nv-websocket-client library*.
+It complies the RFC 6455, which is the WebSocket Protocol.
+
+=== Establish a connection
+The SocketClient is a class which creates a new WebSocket connection.
+[source/java]
+    WebSocket socket = new WebSocket();
+
+In the first step a WebSocketFactory is created.
+This will support the building of the connection and adding the required information.
+It will try connect to the standard Discord gateway (_wss://gateway.discord.gg/?v=6&encoding=json_).
+We have chosen JSON as format of data communication.
+
+[NOTE]
+See Gateway for more information.
+
+If the url isn't cached from previous executions, it will try to the reach to the _https://discordapp.com/api/gateway_ and fetch it.
+[WARNING]
+Currently the url isn't saved persistent and only hardcoded.
+
+Running into problems during the fetch will result in a *CouldNotFetchGateWay* Exception.
+
+With the gateway url the socket connection can be created.
+Add this point a WebSocket listener for the all needed events is required and has to be added.
+
+[NOTE]
+See SocketListener for more information.
+
+[WARNING]
+The proxy settings are still TODO.
+
+The corrected header has to be noted (listed in the Discord API Documentation).
+Thus all information is present and the connection can be created.
+
+[source/java]
+    WebSocketFactory factory = new WebSocketFactory();
+    if(gateway_url == null){
+        gateway_url = getGateWay();
+        if(gateway_url == null){
+            throw new CouldNotFetchGatewayException();
+        }
+    }
+    socket = factory.createSocket(gateway_url)
+        .addListener(socketListener)
+        .addHeader("Accept-Encoding", "gzip")
+        .connect();
+
+If the connection is successful the function *onConnected* in the listener will fire and you can start the handshake.
+If the connection is not successful the function *onConnectedError* will fire and the problems have to be addressed.
+
+=== What connection type are there?
+There a several connection status types our client used to determine in what type of connection it currently is.
+
+.ConnectionStatus
+|===
+|Type |Explanation
+
+|CONNECTION_PENDING
+|The connection isn't established yet.
+
+|CONNECTED_WITHOUT_HANDSHAKE
+|The connection is established, but without a handshake.
+
+|CONNECTED_WITH_HANDSHAKE
+|The connection is established, and the handshake was successful.
+
+|DISCONNECTED_BY_BOT
+|The socket got disconnected by the program.
+
+|DISCONNECTED_BY_SERVER
+|The socket got disconnected by the server, the reason should be in the log files.
+|===
+
+=== Handshake
+Once connected we have to identify our bot at the servers.
+Thus we have to send our information to the Discord server.
+
+[NOTE]
+See SocketListener for more information.
+
+=== Sending a message to the server
+The socket contains a function *sendText* which will send a String the connected server.
+In our case we created class method, which receives a JSONObject as parameter (For Logging reasons).
+The JSONObject will be parsed to a string and send to the Discord server.
+All messages send to Discord will be in JSON format (see more in the Discord API Documentation).
+
+[source/java]
+    void sendMessage(JSONObject msg) {
+        socket.sendText(msg.toString());
+    }
+
+=== Receiving a message
+All messages send by the server will be carried out by the *onTextMessage* function in the listener.
+Every input has to be managed there.
+
+=== Keep the connection alive
+Discord uses a heartbeat system to check if a bot is still connected to the server.
+Heartbeats have to be send in periodic intervals to hold the connection.
+The time between the heartbeats will be send by the server.
+Also the last seq (*s*) has to be added.
+
+The first message the socket will accept is the heartbeat payload.
+It is build the following way:
+
+[source/json]
+    {
+        "op": 10,
+        "s": null,
+        "t": null,
+        "d": {
+            "_trace": ["discord-gateway-prd-1-11"],
+            "heartbeat_interval": 41250
+        }
+    }
+
+The operation code 10 displays the heartbeat payload.
+The important information contains the key "d".
+The heartbeat interval data is the pause between sending the heartbeats.
+
+Immediately after getting the heartbeat payload we start a thread which sends the heartbeat to the server.
+
+[source/java]
+    void startKeepAlive(long timeOut){
+        KeepAliveThread keepAliveThread = new KeepAliveThread(this, timeOut);
+        keepAliveThread.setPriority(Thread.MAX_PRIORITY);
+        keepAliveThread.setDaemon(true);
+        keepAliveThread.start();
+        logger.info("KeepAliveThread successfully started");
+    }
+
+The thread will always send a message to the server in between the pauses.
+[source/java]
+    public void run(){
+        while(client.connectionStatus == ConnectionStatus.CONNECTED_WITH_HANDSHAKE){
+            try {
+                sendHeartBeat();
+                sleep(timeOut);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void sendHeartBeat(){
+        client.sendMessage(new JSONObject().put("op", 1).put("d", client.responseTotal));
+    }
+
+A heartbeat is build like the following:
+[source/json]
+    {
+        "op": 1,
+        "d": 0
+    }
+
+The "d" key is the current seq (*s*).
+
+If the heartbeat was successful the server will send a message that the heartbeat was received.
+
+[source/java]
+    {
+        "op": 11,
+        "s": null,
+        "t": null,
+        "d": null
+    }
+
+If now success message appears the heartbeat had an error, the socket should receive an error message.

@@ -5,12 +5,9 @@ import com.jada.connection.exceptions.CouldNotFetchGatewayException;
 import com.jada.events.EventHandler;
 
 import com.neovisionaries.ws.client.*;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Logger;
 
 
@@ -76,7 +73,7 @@ public class SocketClient {
         }
     }
 
-    void sendMessage(JSONObject msg) throws JSONException {
+    void sendMessage(JSONObject msg) {
         logger.info("Send Message to Websocket\n" + msg.toString(4));
         socket.sendText(msg.toString());
     }
