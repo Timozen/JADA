@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<head>
+<style>
+table { width: 100% }
+th { font:bold 10pt Tahoma; }
+td { font:normal 10pt Tahoma; }
+h1 {font:normal 11pt Tahoma;}
+</style>
+</head>
+<body>
+<h1>Tue Aug 30 20:30:52 CEST 2016</h1>
+<table border="1" cellpadding="5" cellspacing="3">
+<tr align="left">
+	<th style="width:10%">Loglevel</th>
+	<th style="width:15%">Time</th>
+	<th style="width:75%">Log Message</th>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.utils.LogCreator createLogger
+Create the log for SocketClient</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onConnected
+Connect to Websocket</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketClient sendMessage
+Send Message to Websocket
+{
+    "op": 2,
+    "d": {
+        "compress": false,
+        "v": "6",
+        "large_threshold": 250,
+        "properties": {
+            "$device": "Günther",
+            "$os": "Windows 10",
+            "$referrer_domain": "",
+            "$browser": "Günther",
+            "$referrer": ""
+        },
+        "token": "MjE3MjYzNjk5NTU4MjY4OTI5.CpyGhw.ZIF9tsjUUrOBV111Zk8LZ2-vmII"
+    }
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+Received new Message from Websocket
+{
+    "op": 10,
+    "s": null,
+    "t": null,
+    "d": {
+        "_trace": ["discord-gateway-prd-1-11"],
+        "heartbeat_interval": 41250
+    }
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+OP: 10 - Received the HelloPayload - Init the KeepAliveHeartbeat</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketClient startKeepAlive
+KeepAliveThread successfully started</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketClient sendMessage
+Send Message to Websocket
+{
+    "op": 1,
+    "d": 0
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+Received new Message from Websocket
+{
+    "op": 11,
+    "s": null,
+    "t": null,
+    "d": null
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+OP: 11 - The last heartbeat was successful</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+Received new Message from Websocket
+{
+    "op": 0,
+    "s": 1,
+    "t": "READY",
+    "d": {
+        "relationships": [],
+        "_trace": [
+            "discord-gateway-prd-1-11",
+            "discord-sessions-prd-1-5"
+        ],
+        "presences": [],
+        "guilds": [
+            {
+                "unavailable": true,
+                "id": "175319979900534794"
+            },
+            {
+                "unavailable": true,
+                "id": "217265285160370176"
+            }
+        ],
+        "v": 6,
+        "friend_suggestion_count": 0,
+        "session_id": "0eec426214f3cbadf8a59142e0a352d3",
+        "private_channels": [],
+        "user": {
+            "bot": true,
+            "verified": true,
+            "mfa_enabled": false,
+            "id": "217263699558268929",
+            "avatar": null,
+            "email": null,
+            "username": "UJBot",
+            "discriminator": "8432"
+        }
+    }
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.events.EventHandler handle
+Received READY-Event</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.events.EventHandler handle
+New Session_Id: 0eec426214f3cbadf8a59142e0a352d3</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+Received new Message from Websocket
+{
+    "op": 0,
+    "s": 2,
+    "t": "GUILD_CREATE",
+    "d": {
+        "emojis": [],
+        "large": false,
+        "default_message_notifications": 1,
+        "unavailable": false,
+        "owner_id": "175319697565155329",
+        "roles": [
+            {
+                "color": 0,
+                "permissions": 37215233,
+                "managed": false,
+                "name": "@everyone",
+                "mentionable": false,
+                "position": -1,
+                "id": "175319979900534794",
+                "hoist": false
+            },
+            {
+                "color": 2067276,
+                "permissions": 104324097,
+                "managed": false,
+                "name": "@user",
+                "mentionable": true,
+                "position": 1,
+                "id": "177840720625795073",
+                "hoist": true
+            },
+            {
+                "color": 15158332,
+                "permissions": 267910207,
+                "managed": false,
+                "name": "@admin",
+                "mentionable": true,
+                "position": 2,
+                "id": "177841569452261377",
+                "hoist": true
+            },
+            {
+                "color": 0,
+                "permissions": 66583615,
+                "managed": false,
+                "name": "Mee6",
+                "mentionable": false,
+                "position": 1,
+                "id": "210136785131536384",
+                "hoist": false
+            }
+        ],
+        "icon": "e60c6e1bd49c9596ffc4a4b045c12817",
+        "afk_timeout": 300,
+        "joined_at": "2016-08-24T19:01:56.810000+00:00",
+        "features": [],
+        "verification_level": 0,
+        "presences": [
+            {
+                "game": {
+                    "name": "Tricky Towers",
+                    "type": 0
+                },
+                "user": {"id": "91227985142620160"},
+                "status": "online"
+            },
+            {
+                "game": {
+                    "name": "IntelliJ IDEA 2016.2.2",
+                    "type": 0
+                },
+                "user": {"id": "175319697565155329"},
+                "status": "online"
+            },
+            {
+                "game": null,
+                "user": {"id": "175324438949134338"},
+                "status": "idle"
+            },
+            {
+                "game": null,
+                "user": {"id": "217263699558268929"},
+                "status": "online"
+            }
+        ],
+        "channels": [
+            {
+                "permission_overwrites": [],
+                "last_message_id": "218085670625869827",
+                "name": "general",
+                "topic": "",
+                "position": 0,
+                "id": "175319979900534794",
+                "type": 0
+            },
+            {
+                "permission_overwrites": [],
+                "name": "General",
+                "bitrate": 64000,
+                "position": 1,
+                "id": "175319980504645632",
+                "user_limit": 0,
+                "type": 2
+            }
+        ],
+        "afk_channel_id": null,
+        "members": [
+            {
+                "joined_at": "2016-05-05T20:20:17.008000+00:00",
+                "roles": ["177840720625795073"],
+                "deaf": false,
+                "mute": false,
+                "user": {
+                    "id": "91227985142620160",
+                    "avatar": "5dacc79cea82c764134e5626f0eb9510",
+                    "username": "HonsW",
+                    "discriminator": "5124"
+                }
+            },
+            {
+                "joined_at": "2016-04-28T18:59:00.627000+00:00",
+                "roles": ["177841569452261377"],
+                "deaf": false,
+                "mute": false,
+                "user": {
+                    "id": "175319697565155329",
+                    "avatar": "e60c6e1bd49c9596ffc4a4b045c12817",
+                    "username": "Timozen",
+                    "discriminator": "9675"
+                }
+            },
+            {
+                "joined_at": "2016-04-30T14:27:53.184000+00:00",
+                "roles": ["177840720625795073"],
+                "deaf": false,
+                "mute": false,
+                "user": {
+                    "id": "175324438949134338",
+                    "avatar": "ef764c551325d70402bf7f7ea25211a3",
+                    "username": "Jukogenas",
+                    "discriminator": "9069"
+                }
+            },
+            {
+                "joined_at": "2016-08-24T19:01:56.810000+00:00",
+                "roles": [],
+                "deaf": false,
+                "mute": false,
+                "user": {
+                    "bot": true,
+                    "id": "217263699558268929",
+                    "avatar": null,
+                    "username": "UJBot",
+                    "discriminator": "8432"
+                }
+            }
+        ],
+        "name": "Timozen",
+        "mfa_level": 0,
+        "voice_states": [],
+        "id": "175319979900534794",
+        "region": "frankfurt",
+        "member_count": 4,
+        "splash": null
+    }
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:30</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+Received new Message from Websocket
+{
+    "op": 0,
+    "s": 3,
+    "t": "GUILD_CREATE",
+    "d": {
+        "emojis": [],
+        "large": false,
+        "default_message_notifications": 0,
+        "unavailable": false,
+        "owner_id": "217263148330123265",
+        "roles": [{
+            "color": 0,
+            "permissions": 104324097,
+            "managed": false,
+            "name": "@everyone",
+            "mentionable": false,
+            "position": 0,
+            "id": "217265285160370176",
+            "hoist": false
+        }],
+        "icon": null,
+        "afk_timeout": 300,
+        "joined_at": "2016-08-24T18:52:39.446000+00:00",
+        "features": [],
+        "verification_level": 0,
+        "presences": [{
+            "game": null,
+            "user": {"id": "217263699558268929"},
+            "status": "online"
+        }],
+        "channels": [
+            {
+                "permission_overwrites": [],
+                "last_message_id": null,
+                "name": "general",
+                "topic": null,
+                "position": 0,
+                "id": "217265285160370176",
+                "type": 0
+            },
+            {
+                "permission_overwrites": [],
+                "name": "General",
+                "bitrate": 64000,
+                "position": 0,
+                "id": "217265285160370177",
+                "user_limit": 0,
+                "type": 2
+            }
+        ],
+        "afk_channel_id": null,
+        "members": [
+            {
+                "joined_at": "2016-08-22T12:54:40.583000+00:00",
+                "roles": [],
+                "deaf": false,
+                "mute": false,
+                "user": {
+                    "id": "217263148330123265",
+                    "avatar": null,
+                    "username": "UJBot",
+                    "discriminator": "9025"
+                }
+            },
+            {
+                "joined_at": "2016-08-24T18:52:39.446000+00:00",
+                "roles": [],
+                "deaf": false,
+                "mute": false,
+                "user": {
+                    "bot": true,
+                    "id": "217263699558268929",
+                    "avatar": null,
+                    "username": "UJBot",
+                    "discriminator": "8432"
+                }
+            }
+        ],
+        "name": "TestServerUJ",
+        "mfa_level": 0,
+        "voice_states": [],
+        "id": "217265285160370176",
+        "region": "frankfurt",
+        "member_count": 2,
+        "splash": null
+    }
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:31</td>
+	<td><pre>com.jada.connection.SocketClient sendMessage
+Send Message to Websocket
+{
+    "op": 1,
+    "d": 3
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:31</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+Received new Message from Websocket
+{
+    "op": 11,
+    "s": null,
+    "t": null,
+    "d": null
+}</pre></td>
+</tr>
+<tr>
+	<td>INFO</td>
+	<td>Aug 30,2016 20:31</td>
+	<td><pre>com.jada.connection.SocketListener onTextMessage
+OP: 11 - The last heartbeat was successful</pre></td>
+</tr>
