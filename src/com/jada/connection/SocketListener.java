@@ -20,7 +20,7 @@ class SocketListener extends WebSocketAdapter {
 
     @Override
     public void onConnected(WebSocket socket, Map<String, List<String>> headers) {
-        logger.info("Connect to Websocket");
+        logger.info("Connected to Websocket");
 
         client.connectionStatus = ConnectionStatus.CONNECTED_WITHOUT_HANDSHAKE;
 

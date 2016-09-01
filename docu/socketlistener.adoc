@@ -1,0 +1,166 @@
+SocketListener
+==============
+Tim Büchner <tim.buechner04@gmail.com>
+01.09.2016
+
+== Our SocketListener
+A SocketListener is a listener that fires assigned functions on certain occurrences depending for WebSockets.
+It improves the manageability of dealing with the data that the socket receives.
+
+In our case we used the WebSocketAdapter as parent class.
+
+[source/java]
+    class SocketListener extends WebSocketAdapter {
+    }
+
+== For what do we need the listener?
+We use certain functions to determine if our connection is correct the gateway.
+The functions that are important to our project are divided in 2 groups:
+
+* Connection
+* Communication
+
+=== Connection
+.onConnected
+Once our SocketClient connects to the gateway, the first thing we will do is identify us.
+Therefore we check if we currently have a running session (we store the session id).
+
+[source/java]
+    if(client.sessionId == null){
+        sendIdentification();
+    }else{
+        sendReconnect();
+    }
+
+If we have no current session an identification from our side is necessary.
+
+[NOTE]
+See Managing the identification for more info.
+
+If we have a valid session, the bot apparently got disconnected (for what ever reason).
+So we have to send a message to the server that we are back.
+
+[NOTE]
+See Resume a session for more info.
+
+.onDisconnected
+If the bot disconnects from the server, there are a lot information we gather to determine what happened.
+There 2 main groups, the first is the bot disconnected by it self ( possible connection lost or execution end).
+The other one is that the gateway disconnected us.
+Nevertheless on the disconnect the server sends the reason and error code for us.
+These information are useful during debugging/experimenting and should be logged.
+Also we update our connections status depending on the type of disconnect.
+
+[source/java]
+    @Override
+    public void onDisconnected(WebSocket websocket,
+        WebSocketFrame serverCloseFrame,
+        WebSocketFrame clientCloseFrame,
+        boolean closedByServer) throws Exception {
+            logger.info("Disconnected from Websocket - Socket disconnect: " + closedByServer
+                +"\nReason: "+ serverCloseFrame.getCloseReason()
+                +"\nCode  : "+ serverCloseFrame.getCloseCode()
+                );
+            client.connectionStatus = closedByServer ?
+                ConnectionStatus.DISCONNECTED_BY_SERVER :
+                ConnectionStatus.DISCONNECTED_BY_BOT;
+    }
+
+
+
+.GatewayCloseEvents
+|===
+|ErrorCode |Description |Explantion
+
+|4000
+|unknown error
+|Could be everything. Try reconnection the gateway.
+
+|4001
+|unknown opcode
+|Sending a wrong opcode, see the list with valid opcodes.
+
+|4002
+|decode error
+|The object that was send, was build wrong.
+
+|4003
+|not authenticated
+|The sent message was prior the identification therefore not possible
+
+|4004
+|authentication failed
+|The identification data was probably wrong.
+
+|4005
+|already authenticated
+|The identification already happened, avoid sending it again.
+
+|4007
+|invalid seq
+|The seq is not up to date for the heartbeat.
+
+|4008
+|rate limited
+|Sending to much messages to the gateway.
+
+|4009
+|session timeout
+|The session id is invalid. Start a new connection.
+
+|4010
+|invalid shard
+|You sent us an invalid shard when identifying.
+|===
+
+
+=== Communication
+.onTextMessage
+This function is the most import part of the listener.
+All the handling of communication our socket receives is done here.
+The message we get is a String, but in JSON format.
+Therefore it will pe parsed that way to effectively use it.
+
+There are different operations codes that are to handle.
+The most important are listed below:
+
+[WARNING]
+TODO opcodes einfügen
+
+With every opcode "2" the bot receives a seq (s).
+This value is important the heartbeat (see SocketClient)
+
+== Managing the identification
+The first time we connect and the bot has to start a new session (no old session available).
+Therefore the have to send our identification the the gateway.
+The object we have to send is build up like:
+
+[source/json]
+    {
+        "op": 2,
+        "d": {
+            "compress": false,
+            "v": "6",
+            "large_threshold": 250,
+            "properties": {
+                "$device": "DeviceName",
+                "$os": "OS-Name",
+                "$referrer_domain": "",
+                "$browser": "Browser-Name",
+                "$referrer": ""
+            },
+            "token": "YourBotTOKEN"
+        }
+    }
+
+The identification has the opcode 2 and the data values as specified.
+
+This object will be send over the SocketClient sendMessage method.
+
+If the identification was successful the handshake is complete and the bot can communication with gateway.
+If it was successful the bot receives a new message with all serves the bot is connected to.
+If there was an error the onDisconnected will trigger and give you the reason for the disconnect.
+
+== How do we resume?
+[WARNING]
+TODO

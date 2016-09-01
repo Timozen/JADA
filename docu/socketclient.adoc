@@ -1,14 +1,13 @@
-= Documentation
+SocketClient
+============
+Tim Büchner <tim.buechner04@gmail.com>
+01.09.2016
 
-== SocketClient
-
-This piece of code creates the socket connection to the discord server.
-
-=== What we used
+== What we used
 To establish the connection we used the *nv-websocket-client library*.
 It complies the RFC 6455, which is the WebSocket Protocol.
 
-=== Establish a connection
+== Establish a connection
 The SocketClient is a class which creates a new WebSocket connection.
 [source/java]
     WebSocket socket = new WebSocket();
@@ -55,7 +54,7 @@ Thus all information is present and the connection can be created.
 If the connection is successful the function *onConnected* in the listener will fire and you can start the handshake.
 If the connection is not successful the function *onConnectedError* will fire and the problems have to be addressed.
 
-=== What connection type are there?
+== What connection type are there?
 There a several connection status types our client used to determine in what type of connection it currently is.
 
 .ConnectionStatus
@@ -78,14 +77,14 @@ There a several connection status types our client used to determine in what typ
 |The socket got disconnected by the server, the reason should be in the log files.
 |===
 
-=== Handshake
+== Handshake
 Once connected we have to identify our bot at the servers.
 Thus we have to send our information to the Discord server.
 
 [NOTE]
 See SocketListener for more information.
 
-=== Sending a message to the server
+== Sending a message to the server
 The socket contains a function *sendText* which will send a String the connected server.
 In our case we created class method, which receives a JSONObject as parameter (For Logging reasons).
 The JSONObject will be parsed to a string and send to the Discord server.
@@ -96,11 +95,11 @@ All messages send to Discord will be in JSON format (see more in the Discord API
         socket.sendText(msg.toString());
     }
 
-=== Receiving a message
+== Receiving a message
 All messages send by the server will be carried out by the *onTextMessage* function in the listener.
 Every input has to be managed there.
 
-=== Keep the connection alive
+== Keep the connection alive
 Discord uses a heartbeat system to check if a bot is still connected to the server.
 Heartbeats have to be send in periodic intervals to hold the connection.
 The time between the heartbeats will be send by the server.
