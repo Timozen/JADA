@@ -3,7 +3,6 @@ package com.jada.connection;
 import com.jada.bot.Jada;
 import com.jada.utils.LogCreator;
 import com.jada.connection.exceptions.CouldNotFetchGatewayException;
-import com.jada.events.EventHandler;
 
 import com.neovisionaries.ws.client.*;
 import org.json.JSONObject;
@@ -20,7 +19,7 @@ public class SocketClient {
     ConnectionStatus connectionStatus;
 
     private WebSocket socket;
-    final EventHandler eventHandler;
+    final GatewayEventHandler gatewayEventHandler;
     private final SocketListener socketListener;
 
     public Jada jadaStorage;
@@ -31,7 +30,7 @@ public class SocketClient {
         this.token = token;
         this.logger = LogCreator.createLogger("SocketClient", debugLog);
         this.jadaStorage = jadaStorage;
-        this.eventHandler   = new EventHandler(this, logger);
+        this.gatewayEventHandler = new GatewayEventHandler(this, logger);
         this.socketListener = new SocketListener(this, logger);
 
 
