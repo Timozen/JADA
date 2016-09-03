@@ -25,7 +25,7 @@ class KeepAliveThread extends Thread {
     }
 
     private void sendHeartBeat(){
-        client.sendMessage(new JSONObject().put("op", 1).put("d", client.responseTotal));
+        client.sendMessage(new JSONObject().put("op", 1).put("d", client.jadaStorage.responseTotal));
     }
 
 

@@ -1,5 +1,6 @@
 package com.jada.connection;
 
+import com.jada.bot.Jada;
 import com.jada.utils.LogCreator;
 import com.jada.connection.exceptions.CouldNotFetchGatewayException;
 import com.jada.events.EventHandler;
@@ -21,15 +22,18 @@ public class SocketClient {
     private WebSocket socket;
     final EventHandler eventHandler;
     private final SocketListener socketListener;
-    int responseTotal;
+
+    public Jada jadaStorage;
 
     private final Logger logger;
 
-    public SocketClient(String token, boolean debugLog){
+    public SocketClient(String token, boolean debugLog, Jada jadaStorage){
         this.token = token;
         this.logger = LogCreator.createLogger("SocketClient", debugLog);
+        this.jadaStorage = jadaStorage;
         this.eventHandler   = new EventHandler(this, logger);
         this.socketListener = new SocketListener(this, logger);
+
 
         try {
             connect();

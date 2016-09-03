@@ -1,5 +1,6 @@
 package com.jada.connection;
 
+import com.jada.bot.Jada;
 import com.neovisionaries.ws.client.*;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,6 +13,7 @@ class SocketListener extends WebSocketAdapter {
 
     private final SocketClient client;
     private final Logger logger;
+
 
     public SocketListener(SocketClient client, Logger logger){
         this.client = client;
@@ -67,7 +69,7 @@ class SocketListener extends WebSocketAdapter {
         int opCode = content.getInt("op");
 
         if(content.has("s") && !content.isNull("s")){
-            client.responseTotal = content.getInt("s");
+            client.jadaStorage.responseTotal = content.getInt("s");
         }
 
         switch (opCode){
