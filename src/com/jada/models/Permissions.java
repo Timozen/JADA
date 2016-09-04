@@ -1,5 +1,7 @@
 package com.jada.models;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,5 +73,13 @@ public class Permissions {
     public Permissions removePermission(PermissionConstants p){
         this.permissions.remove(p);
         return this;
+    }
+
+    public String dumpPermissions(){
+        JSONObject permJSON = new JSONObject();
+        for(PermissionConstants p: this.permissions){
+            permJSON.put(p.getName(), p.getValue());
+        }
+        return permJSON.toString();
     }
 }
