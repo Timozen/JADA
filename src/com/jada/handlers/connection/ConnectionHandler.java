@@ -1,17 +1,16 @@
-package com.jada.handlers.guild;
-
+package com.jada.handlers.connection;
 
 import com.jada.bot.Jada;
 import com.jada.handlers.EventHandler;
 import org.json.JSONObject;
 
-abstract class GuildHandler implements EventHandler{
+abstract class ConnectionHandler implements EventHandler {
 
     protected Jada jada;
     protected int eventNumber;
     protected JSONObject data;
 
-    public GuildHandler(Jada jada, int eventNumber){
+    public ConnectionHandler(Jada jada, int eventNumber){
         this.jada = jada;
         this.eventNumber = eventNumber;
     }

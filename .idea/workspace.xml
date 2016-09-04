@@ -2,26 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9f33bed-886d-482c-8afd-ab79e1bdab27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildBanAddHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildBanRemoveHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildDeleteHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildEmojiUpdateHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildIntegrationsUpdateHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildMemberAddHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildMemberChunkHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildMemberRemoveHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildMemberUpdateHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildRoleAddCreateHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildRoleDeleteHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildRoleUpdateHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildUpdateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelCreateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelDeleteHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelUpdateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/connection/ConnectionHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/connection/ReadyHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/connection/ResumeHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/message/MessageDeleteBulkHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/message/MessageDeleteHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/message/MessageUpdateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/message/TypingStartHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/user/PresenceUpdate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/user/UserHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/user/UserSettingsUpdateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/user/UserUpdateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceServerUpdateHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceStateUpdateHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jada/bot/Jada.java" afterPath="$PROJECT_DIR$/src/com/jada/bot/Jada.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jada/builder/GuildBuilder.java" afterPath="$PROJECT_DIR$/src/com/jada/builder/GuildBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jada/builder/RoleBuilder.java" afterPath="$PROJECT_DIR$/src/com/jada/builder/RoleBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildCreateHandler.java" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildCreateHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jada/models/Guild.java" afterPath="$PROJECT_DIR$/src/com/jada/models/Guild.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jada/models/Role.java" afterPath="$PROJECT_DIR$/src/com/jada/models/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildHandler.java" afterPath="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildHandler.java" />
     </list>
     <ignored path="JADA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,13 +51,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GuildHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/guild/GuildHandler.java">
+      <file leaf-file-name="ChannelCreateHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelCreateHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" selection-start-line="8" selection-start-column="34" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChannelUpdateHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelUpdateHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChannelDeleteHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelDeleteHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#383#384#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,26 +125,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/logs/docu.adoc" />
-        <option value="$PROJECT_DIR$/docu/docu.adoc" />
-        <option value="$PROJECT_DIR$/token.txt" />
-        <option value="$PROJECT_DIR$/src/com/jada/events/EventHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/utils/LogCreator.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/connection/SocketClient.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/docu/socketclient.adoc" />
-        <option value="$PROJECT_DIR$/docu/socketlistener.adoc" />
-        <option value="$PROJECT_DIR$/src/com/jada/connection/EventHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/handlers/EventHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/connection/SocketListener.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/listener/EventListener.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/manager/EventManager.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/bot/Bot.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/listener/MessageListener.java" />
         <option value="$PROJECT_DIR$/src/com/jada/models/Message.java" />
         <option value="$PROJECT_DIR$/src/com/jada/handlers/message/MessageCreateHandler.java" />
         <option value="$PROJECT_DIR$/src/com/jada/handlers/message/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildHandler.java" />
         <option value="$PROJECT_DIR$/src/com/jada/models/VoiceState.java" />
         <option value="$PROJECT_DIR$/src/com/jada/models/Emoji.java" />
         <option value="$PROJECT_DIR$/src/com/jada/models/VoiceChannel.java" />
@@ -137,6 +156,26 @@
         <option value="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildMemberChunkHandler.java" />
         <option value="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildMemberUpdateHandler.java" />
         <option value="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildMemberRemoveHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/connection/ConnectionHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/guild/GuildHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/user/UserHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/voice/VoiceHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/connection/ReadyHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/connection/ResumeHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/message/MessageUpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/message/MessageDeleteHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/message/MessageDeleteBulkHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/message/TypingStartHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/user/UserSettingsUpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/user/UserUpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/user/PresenceUpdate.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceStateUpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceServerUpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelCreateHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelUpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelDeleteHandler.java" />
       </list>
     </option>
   </component>
@@ -157,10 +196,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="-7" />
+    <option name="width" value="1188" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -247,32 +285,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="handlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JADA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JADA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="handlers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guild" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -879,7 +891,7 @@
       <workItem from="1472902687356" duration="15878000" />
       <workItem from="1472937463595" duration="959000" />
       <workItem from="1472985030513" duration="79000" />
-      <workItem from="1472987775264" duration="1102000" />
+      <workItem from="1472987775264" duration="2082000" />
     </task>
     <task id="LOCAL-00001" summary="Updated project structure">
       <created>1472573862621</created>
@@ -979,11 +991,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472919132426</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added all the guild handlers for the specific gateway guild events (not referenced yet)">
+      <created>1472988912754</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1472988912754</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29948000" />
+    <option name="totallyTimeSpent" value="30928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -995,8 +1014,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1188" height="1087" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1009,7 +1028,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16471216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38652483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1067,7 +1086,8 @@
     <MESSAGE value="delete old libs" />
     <MESSAGE value="Merge branch 'websocket' into 'master'" />
     <MESSAGE value="Added several models including first implementations of it, added the listener and handler system (including eventmanager), added builder for the models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added several models including first implementations of it, added the listener and handler system (including eventmanager), added builder for the models" />
+    <MESSAGE value="Added all the guild handlers for the specific gateway guild events (not referenced yet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added all the guild handlers for the specific gateway guild events (not referenced yet)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1080,178 +1100,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Bot/src/com/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/connection/KeepAliveThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/utils/LogCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docu/socketclient.adoc">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;AsciiDocPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="272">
-            <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docu/socketlistener.adoc">
-      <provider selected="true" editor-type-id="split-provider[text-editor;AsciiDocPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="108" column="51" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/listener/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/message/MessageCreateHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/listener/MessageListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/message/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/models/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/manager/EventManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/models/VoiceState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/models/Emoji.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/bot/Bot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/models/TextChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/models/VoiceChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jada/builder/Builder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#170#171#0" expanded="false" />
-            <element signature="e#202#203#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jada/connection/SocketClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1326,6 +1174,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,7 +1217,7 @@
         <state relative-caret-position="238">
           <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1396,7 +1245,7 @@
         <state relative-caret-position="119">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1414,7 +1263,7 @@
         <state relative-caret-position="127">
           <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1434,11 +1283,11 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="8" selection-start-column="32" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#282#283#0" expanded="false" />
+            <element signature="e#346#347#0" expanded="false" />
+            <element signature="e#373#374#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1448,11 +1297,11 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="8" selection-start-column="31" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#282#283#0" expanded="false" />
+            <element signature="e#346#347#0" expanded="false" />
+            <element signature="e#373#374#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1462,11 +1311,11 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="8" selection-start-column="32" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#243#244#0" expanded="false" />
+            <element signature="e#283#284#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
+            <element signature="e#374#375#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1476,11 +1325,11 @@
         <state relative-caret-position="68">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#216#217#0" expanded="false" />
+            <element signature="e#256#257#0" expanded="false" />
+            <element signature="e#320#321#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1490,11 +1339,11 @@
         <state relative-caret-position="68">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#210#211#0" expanded="false" />
+            <element signature="e#250#251#0" expanded="false" />
+            <element signature="e#314#315#0" expanded="false" />
+            <element signature="e#341#342#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1504,11 +1353,11 @@
         <state relative-caret-position="272">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#211#212#0" expanded="false" />
+            <element signature="e#251#252#0" expanded="false" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#342#343#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1518,11 +1367,11 @@
         <state relative-caret-position="255">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#212#213#0" expanded="false" />
+            <element signature="e#252#253#0" expanded="false" />
+            <element signature="e#316#317#0" expanded="false" />
+            <element signature="e#343#344#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1532,11 +1381,11 @@
         <state relative-caret-position="119">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#214#215#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+            <element signature="e#318#319#0" expanded="false" />
+            <element signature="e#345#346#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1546,11 +1395,11 @@
         <state relative-caret-position="68">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#215#216#0" expanded="false" />
+            <element signature="e#255#256#0" expanded="false" />
+            <element signature="e#319#320#0" expanded="false" />
+            <element signature="e#346#347#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1560,11 +1409,11 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#248#249#0" expanded="false" />
+            <element signature="e#288#289#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#379#380#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1574,11 +1423,11 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="8" selection-start-column="45" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#267#268#0" expanded="false" />
+            <element signature="e#307#308#0" expanded="false" />
+            <element signature="e#371#372#0" expanded="false" />
+            <element signature="e#398#399#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1588,11 +1437,11 @@
         <state relative-caret-position="306">
           <caret line="18" column="1" selection-start-line="8" selection-start-column="36" selection-end-line="18" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#252#253#0" expanded="false" />
+            <element signature="e#292#293#0" expanded="false" />
+            <element signature="e#356#357#0" expanded="false" />
+            <element signature="e#383#384#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1602,21 +1451,273 @@
         <state relative-caret-position="306">
           <caret line="18" column="1" selection-start-line="8" selection-start-column="36" selection-end-line="18" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#249#250#0" expanded="false" />
+            <element signature="e#289#290#0" expanded="false" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#380#381#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/user/UserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/guild/GuildHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" selection-start-line="6" selection-start-column="29" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/connection/ReadyHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="1" selection-start-line="6" selection-start-column="26" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#277#278#0" expanded="false" />
+            <element signature="e#341#342#0" expanded="false" />
+            <element signature="e#368#369#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/connection/ResumeHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#243#244#0" expanded="false" />
+            <element signature="e#283#284#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
+            <element signature="e#374#375#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/connection/ConnectionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/message/MessageUpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="9" selection-start-column="34" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/message/MessageDeleteHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#250#251#0" expanded="false" />
+            <element signature="e#290#291#0" expanded="false" />
+            <element signature="e#358#359#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/message/MessageDeleteBulkHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#217#218#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/message/TypingStartHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#246#247#0" expanded="false" />
+            <element signature="e#286#287#0" expanded="false" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#381#382#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/user/UserSettingsUpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="8" selection-start-column="39" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#255#256#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#361#362#0" expanded="false" />
+            <element signature="e#388#389#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/user/UserUpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#239#240#0" expanded="false" />
+            <element signature="e#279#280#0" expanded="false" />
+            <element signature="e#345#346#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/user/PresenceUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#233#234#0" expanded="false" />
+            <element signature="e#273#274#0" expanded="false" />
+            <element signature="e#339#340#0" expanded="false" />
+            <element signature="e#366#367#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/message/MessageCreateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="0" selection-start-line="6" selection-start-column="33" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceServerUpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+            <element signature="e#294#295#0" expanded="false" />
+            <element signature="e#358#359#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/voice/VoiceStateUpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="8" selection-start-column="37" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#252#253#0" expanded="false" />
+            <element signature="e#292#293#0" expanded="false" />
+            <element signature="e#356#357#0" expanded="false" />
+            <element signature="e#383#384#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelCreateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="8" selection-start-column="34" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelUpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jada/handlers/channel/ChannelDeleteHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
           </folding>
         </state>
       </provider>

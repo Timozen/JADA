@@ -1,17 +1,19 @@
-package com.jada.handlers.guild;
-
+package com.jada.handlers.voice;
 
 import com.jada.bot.Jada;
 import com.jada.handlers.EventHandler;
 import org.json.JSONObject;
 
-abstract class GuildHandler implements EventHandler{
+/**
+ * Created by Tim on 04.09.2016.
+ */
+abstract class VoiceHandler implements EventHandler {
 
     protected Jada jada;
     protected int eventNumber;
     protected JSONObject data;
 
-    public GuildHandler(Jada jada, int eventNumber){
+    public VoiceHandler(Jada jada, int eventNumber){
         this.jada = jada;
         this.eventNumber = eventNumber;
     }
