@@ -6,9 +6,9 @@ import org.json.JSONObject;
 /**
  * Created by Tim on 04.09.2016.
  */
-public class PresenceUpdate extends UserHandler {
+public class PresenceUpdateHandler extends UserHandler {
 
-    public PresenceUpdate(Jada jada, int eventNumber){
+    public PresenceUpdateHandler(Jada jada, int eventNumber){
         super(jada, eventNumber);
     }
 

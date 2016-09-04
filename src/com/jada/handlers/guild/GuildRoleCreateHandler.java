@@ -3,9 +3,9 @@ package com.jada.handlers.guild;
 import com.jada.bot.Jada;
 import org.json.JSONObject;
 
-public class GuildRoleAddCreateHandler  extends GuildHandler{
+public class GuildRoleCreateHandler extends GuildHandler{
 
-    public GuildRoleAddCreateHandler(Jada jada, int eventNumber){
+    public GuildRoleCreateHandler(Jada jada, int eventNumber){
         super(jada, eventNumber);
     }
 
