@@ -13,18 +13,16 @@ import java.util.logging.Logger;
 
 public class SocketClient {
 
-    final String token;
+    protected final String token;
     private String gateway_url;
-    public String sessionId;
-    ConnectionStatus connectionStatus;
-
+    protected ConnectionStatus connectionStatus;
     private WebSocket socket;
-    final GatewayEventHandler gatewayEventHandler;
+    protected final GatewayEventHandler gatewayEventHandler;
     private final SocketListener socketListener;
-
-    public Jada jadaStorage;
-
+    protected Jada jadaStorage;
     private final Logger logger;
+
+    private boolean ready = false;
 
     public SocketClient(String token, boolean debugLog, Jada jadaStorage){
         this.token = token;
@@ -40,6 +38,15 @@ public class SocketClient {
             e.printStackTrace();
         }
     }
+
+    public void ready(){
+        if(!ready){
+            ready = true;
+            logger.info("The Bot is now ready "
+                    +"\nThe Bot in online on " +jadaStorage.getGuilds().size() + " servern");
+        }
+    }
+
 
     void startKeepAlive(long timeOut){
         KeepAliveThread keepAliveThread = new KeepAliveThread(this, timeOut);
@@ -85,4 +92,7 @@ public class SocketClient {
         socket.disconnect();
     }
 
+    public boolean isReady() { return ready; }
+
+    public void setReady(boolean ready) { this.ready = ready; }
 }

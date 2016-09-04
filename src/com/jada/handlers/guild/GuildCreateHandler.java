@@ -13,8 +13,26 @@ public class GuildCreateHandler extends GuildHandler {
     }
 
     @Override
-    public String handleSpecific(JSONObject d) {
-        new GuildBuilder(jada).create(d);
+    public String handleSpecific(JSONObject data) {
+
+        String id = data.getString("id");
+        Guild guild = jada.getGuilds().get(id);
+
+        boolean oldUnavailableState = (guild == null) ? null : guild.isUnavailable();
+
+        if(guild == null){
+            new GuildBuilder(jada).create(data);
+
+            //fire new GuildJoinEvent -- bot joined new guild
+        }else{
+            new GuildBuilder(jada).create(data);
+
+            if(!guild.isUnavailable()){
+
+            }else{
+                //fire new GuildJoinUnavailable
+            }
+        }
         return null;
     }
 }

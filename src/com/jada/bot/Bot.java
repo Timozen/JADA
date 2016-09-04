@@ -35,7 +35,7 @@ public class Bot {
 
     public Bot build(){
         socketClient = new SocketClient(this.TOKEN, this.logging, this.jadaStorage);
-
+        jadaStorage.setSocketClient(socketClient);
         listeners.forEach(listener -> jadaStorage.addEventListener(listener));
 
         return this;

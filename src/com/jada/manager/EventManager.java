@@ -1,5 +1,6 @@
 package com.jada.manager;
 
+import com.jada.event.Event;
 import com.jada.listener.EventListener;
 
 import java.util.ArrayList;
@@ -21,8 +22,8 @@ public class EventManager {
         return listeners;
     }
 
-    public void handle(String string){
-        listeners.forEach(listener -> listener.onEvent(string));
+    public void handle(Event event){
+        listeners.forEach(listener -> listener.onEvent(event));
     }
 
 }

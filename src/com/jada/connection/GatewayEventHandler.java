@@ -39,7 +39,6 @@ class GatewayEventHandler {
             //Connection Events//
             case "READY":
                 new ReadyHandler(jada, eventNumber).handle(data);
-                client.sessionId = (String) content.get("session_id");
                 break;
             case "RESUMED":
                 new ResumeHandler(jada, eventNumber).handle(data);

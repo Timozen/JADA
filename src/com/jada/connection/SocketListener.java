@@ -24,7 +24,7 @@ class SocketListener extends WebSocketAdapter {
 
         client.connectionStatus = ConnectionStatus.CONNECTED_WITHOUT_HANDSHAKE;
 
-        if(client.sessionId == null){
+        if(client.jadaStorage.getSessionId() == null){
             sendIdentification();
         }else{
             //TODO zeigen, dass wir wieder da sind

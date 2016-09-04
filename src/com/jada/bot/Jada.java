@@ -1,9 +1,11 @@
 package com.jada.bot;
 
+import com.jada.connection.SocketClient;
 import com.jada.listener.EventListener;
 import com.jada.manager.EventManager;
 import com.jada.models.*;
 
+import java.net.Socket;
 import java.util.HashMap;
 
 /**
@@ -13,6 +15,9 @@ import java.util.HashMap;
 public class Jada {
     public int responseTotal;
     private EventManager eventManager = new EventManager();
+    private SocketClient socketClient;
+    private String sessionId;
+
 
     private HashMap<String, Guild> guilds = new HashMap<>();
     private HashMap<String, User> users = new HashMap<>();
@@ -63,4 +68,20 @@ public class Jada {
     public HashMap<String, Guild> getGuilds() { return guilds;}
 
     public void setGuilds(HashMap<String, Guild> guilds) { this.guilds = guilds; }
+
+    public SocketClient getSocketClient() {
+        return socketClient;
+    }
+
+    public void setSocketClient(SocketClient socketClient) {
+        this.socketClient = socketClient;
+    }
+
+    public String getSessionId() {
+        return sessionId;
+    }
+
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+    }
 }
