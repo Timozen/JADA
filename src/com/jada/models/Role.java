@@ -1,8 +1,5 @@
 package com.jada.models;
 
-/**
- * Created by Tim on 03.09.2016.
- */
 public class Role {
 
     private String id;

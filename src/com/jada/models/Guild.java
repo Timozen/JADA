@@ -36,8 +36,6 @@ public class Guild {
         this.roles = roles;
     }
 
-
-
     public String getId() {
         return id;
     }

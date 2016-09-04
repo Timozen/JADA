@@ -15,15 +15,14 @@ public class GuildBuilder extends Builder {
     @Override
     public Guild create(JSONObject content) {
         String id = content.getString("id");
-        Guild guild = jada.findGuild(id);
+        Guild guild = jada.getGuilds().get(id);
 
         if(guild == null){
-            guild.setId(id);
-            jada.addGuild(guild);
+            guild = new Guild().setId(id);
+            jada.getGuilds().put(id, guild);
         }
         if(content.has("unavailable") && content.getBoolean("unavailable")){
             guild.setUnavailable(true);
-
             return guild;
         }
 
@@ -34,7 +33,7 @@ public class GuildBuilder extends Builder {
                 .setOwner_id(content.getString("owner_id"))
                 .setRegion(content.getString("region"))
                 .setName(content.getString("name"))
-                .setAfk_channel_id(content.isNull("afk_channel_id")? null : content.getString("afk_channel_id"));
+                .setAfk_channel_id(content.isNull("afk_channel_id") ? null : content.getString("afk_channel_id"));
 
         JSONArray roles = content.getJSONArray("roles");
         for(int i = 0; i < roles.length(); i++){
@@ -51,8 +50,6 @@ public class GuildBuilder extends Builder {
         if(content.has("presences")){
 
         }
-
-
         return guild;
     }
 }

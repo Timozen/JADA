@@ -14,9 +14,7 @@ public class GuildCreateHandler extends GuildHandler {
 
     @Override
     public String handleSpecific(JSONObject d) {
-
         new GuildBuilder(jada).create(d);
-
         return null;
     }
 }

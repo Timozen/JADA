@@ -4,7 +4,6 @@ import com.jada.listener.EventListener;
 import com.jada.manager.EventManager;
 import com.jada.models.*;
 
-import java.nio.channels.Channel;
 import java.util.HashMap;
 
 /**
@@ -61,11 +60,7 @@ public class Jada {
         return eventManager;
     }
 
-    public void addGuild(Guild guild){
-        guilds.put(guild.getId(), guild);
-    }
+    public HashMap<String, Guild> getGuilds() { return guilds;}
 
-    public Guild findGuild(String id){
-        return guilds.get(id);
-    }
+    public void setGuilds(HashMap<String, Guild> guilds) { this.guilds = guilds; }
 }

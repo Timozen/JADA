@@ -17,7 +17,7 @@ public class RoleBuilder extends Builder{
         Role role = jada.getRoles().get(id);
 
         if(role == null){
-            role.setId(id);
+            role = new Role().setId(id);
             jada.getRoles().put(id, role);
         }
 
