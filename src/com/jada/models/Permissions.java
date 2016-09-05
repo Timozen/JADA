@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Permissions {
     private List<PermissionConstants> permissions;
-    Permissions(long int_permissions){
+    public Permissions(long int_permissions){
         this.permissions = new ArrayList<>();
         if((int_permissions & 0x00000001) == 0x00000001){this.permissions.add(PermissionConstants.CREATE_INSTANT_INVITE);}
         if((int_permissions & 0x00000002) == 0x00000002){this.permissions.add(PermissionConstants.KICK_MEMBERS);}
@@ -75,11 +75,43 @@ public class Permissions {
         return this;
     }
 
+    /*
+        dumpPermissions     -   for debug purposes
+        parameters:
+            -
+        returns:
+            string with active permissions (JSON-formatted)
+     */
     public String dumpPermissions(){
         JSONObject permJSON = new JSONObject();
         for(PermissionConstants p: this.permissions){
             permJSON.put(p.getName(), p.getValue());
         }
         return permJSON.toString();
+    }
+
+    /*
+        getPermissions      -   gives a List of permissions
+        parameters:
+            -
+        returns:
+            List with permissions
+     */
+    public List<PermissionConstants> getPermissions(){
+        return this.permissions;
+    }
+
+
+    /*
+        getMissingPermissions-   gives a List of missing permissions
+        parameters:
+            -
+        returns:
+            List with permissions which aren't set
+     */
+    public List<PermissionConstants> getMissingPermissions(){
+        List<PermissionConstants> missingList = new ArrayList<>();
+        /*Comes later*/
+        return null;
     }
 }
